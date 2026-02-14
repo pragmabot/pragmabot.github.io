@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-    content="A Pragmatist Robot: Learning to Plan Tasks by Experiencing the Real World">
-  <meta name="keywords" content="Robot memory, vision-language models, task planning, Learning from Experience">
+  <meta name="description" content="A Pragmatist Robot: Learning to Plan Tasks by Experiencing the Real World">
+  <meta name="keywords" content="Robot memory, vision-language models, task planning, Learning from experience">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A Pragmatist Robot: Learning to Plan Tasks by Experiencing the Real World</title>
 
@@ -30,8 +29,6 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
-  <script src="./static/js/prompts.js"></script>
-  <script src="./static/js/examples.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
@@ -44,70 +41,170 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/github-mark.svg">
+  <link rel="icon" href="./static/images/robot_avatar.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    .sc {
+      font-variant: small-caps;
+    }
+  </style>
 </head>
 
 <body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="#">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://ippon-paper.github.io">
+              IPPON
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 is-size-2 publication-title">A Pragmatist Robot: Learning to Plan Tasks by Experiencing the Real World</h1>
+            <h1 class="title is-1 publication-title">A Pragmatist Robot: Learning to Plan Tasks by
+              Experiencing the Real World</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="mailto:kaixqu@ethz.ch">Kaixian Qu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                Guowei Lan<sup>1</sup>,</span>
+              <span class="author-block">
+                René Zurbrügg<sup>1,2</sup>,</span>
+              <span class="author-block">
+                Changan Chen<sup>1</sup>,</span>
+              <span class="author-block">
+                Christopher E. Mower<sup>3</sup>,</span>
+              <span class="author-block">
+                Haitham Bou-Ammar<sup>3,4</sup>,</span>
+              <span class="author-block">
+                Marco Hutter<sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Robotic Systems Lab, ETH Zürich,</span>
+              <span class="author-block"><sup>2</sup>ETH AI Center,</span>
+              <span class="author-block"><sup>3</sup>Huawei Noah's Ark Lab,</span>
+              <span class="author-block"><sup>4</sup>UCL Centre for AI</span>
+            </div>
+
+            <br />
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block is-italic">IEEE Robotics and
+                Automation Letters (RA-L)</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="./static/pdf/pragmabot_ral_final.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <!-- https://arxiv.org/abs/2507.16713 -->
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (coming soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
+  <section class="hero teaser">
     <div class="container is-max-desktop">
-      <!-- Animation. -->
-      <section class="hero teaser">
-        <div class="container is-max-desktop">
-          <div class="hero-body">
-            <video id="teaser" autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/teaser.mp4" type="video/mp4">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              Robot completes a new task guided by a long-term memory of self-reflective experiences.
-    <!-- When executing a novel task, the robot maintains a short-term memory that helps it reflect and learn how to complete the task.
-    The experience is then stored as long-term memory and retrieved to guide the VLM’s task planning whenever a similar scenario is encountered. -->
-            </h2>
-          </div>
-        </div>
-      </section>
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Robot completes a new task guided by a long-term memory of self-reflective experiences.
+        </h2>
+      </div>
     </div>
   </section>
 
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
-        <h3 class="title is-5 has-text-centered">The robot completing challenging tasks using short-term memory and self-reflection</h3>
+        <h3 class="title is-5 has-text-centered">The robot completing challenging tasks using short-term memory and
+          self-reflection</h3>
 
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+        <div id="results-carousel-stm" class="carousel results-carousel">
+          <div class="item item-stm-egg">
+            <video poster="" id="stm-egg" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/stm_move_egg.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-stm-plate">
+            <video poster="" id="stm-plate" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/stm_pick_plate.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-stm-candy">
+            <video poster="" id="stm-candy" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/stm_push_candy.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-stm-apple">
+            <video poster="" id="stm-apple" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/stm_move_apple.mp4" type="video/mp4">
             </video>
           </div>
@@ -116,50 +213,50 @@
     </div>
   </section>
 
-
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
-        <h3 class="title is-5 has-text-centered">The robot planning correct action sequences after experiencing similar ones</h3>
+        <h3 class="title is-5 has-text-centered">The robot planning correct action sequences after experiencing similar
+          ones</h3>
 
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+        <div id="results-carousel-ltm" class="carousel results-carousel">
+          <div class="item item-ltm-grapes">
+            <video poster="" id="ltm-grapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/ltm_move_grapes_to_banana.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-ltm-paper">
+            <video poster="" id="ltm-paper" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/ltm_move_paper_to_banana.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-ltm-milk">
+            <video poster="" id="ltm-milk" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/ltm_pick_milk_cartoon.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-ltm-tennis">
+            <video poster="" id="ltm-tennis" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/ltm_pick_tennis_ball.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-ltm-screw">
+            <video poster="" id="ltm-screw" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/ltm_move_screw_to_toolbox.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-ltm-sushi">
+            <video poster="" id="ltm-sushi" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/ltm_move_sushi_to_plate.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-ltm-towel">
+            <video poster="" id="ltm-towel" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/ltm_pick_towel.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-ltm-orange">
+            <video poster="" id="ltm-orange" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/ltm_put_orange_on_plate.mp4" type="video/mp4">
             </video>
           </div>
@@ -176,7 +273,23 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Large language models (LLMs) have proven effective in enabling robotic task planning from natural language instructions. To align language with low-level robot capabilities, LLMs are typically used in conjunction with a learned affordance model. However, this approach requires extensive data for training visual affordances, limiting its practical deployment. Inspired by the emerging paradigm of verbal reinforcement learning—where LLM agents improve through self-reflection and few-shot learning—we introduce PRAGMABOT, a framework that enables robots to learn task planning through real-world experience without relying on extensive training data. PRAGMABOT employs a vision-language model (VLM) as the robot's “brain” and “eye”, allowing it to visually evaluate action outcomes and self-reflect on failures. These reflections are stored in a short-term memory (STM), enabling the robot to quickly adapt its behavior during ongoing tasks. Upon task completion, the robot summarizes the lessons learned into its long-term memory (LTM). When facing new tasks, it can leverage retrieval-augmented generation (RAG) to plan more grounded action sequences by drawing on relevant past experiences and knowledge. Experiments on four challenging robotic tasks show that STM-based self-reflection increases task success rates from 36% to 84%, with emergent intelligent object interactions. In 12 real-world scenarios (including eight previously unseen tasks), the robot effectively learns from the LTM and improves single-trial success rates from 22% to 80%, with RAG outperforming naive prompting. These results highlight the effectiveness and generalizability of PRAGMABOT.
+              Large language models (LLMs) have emerged as the dominant paradigm for robotic task planning using natural
+              language instructions. However, trained on general internet data, LLMs are not inherently aligned with the
+              embodiment, skill sets, and limitations of real-world robotic systems. Inspired by the emerging paradigm
+              of verbal reinforcement learning—where LLM agents improve through self-reflection and few-shot learning
+              without parameter updates—we introduce <span class="sc">PragmaBot</span>, a framework that enables robots
+              to learn task planning through real-world experience. <span class="sc">PragmaBot</span> employs a
+              vision-language model (VLM) as the robot's “brain” and “eye”, allowing it to visually evaluate action
+              outcomes and self-reflect on failures. These reflections are stored in a short-term memory (STM), enabling
+              the robot to quickly adapt its behavior during ongoing tasks. Upon task completion, the robot summarizes
+              the lessons learned into its long-term memory (LTM). When facing new tasks, it can leverage
+              retrieval-augmented generation (RAG) to plan more grounded action sequences by drawing on relevant past
+              experiences and knowledge. Experiments on four challenging robotic tasks show that STM-based
+              self-reflection increases task success rates from 35% to 84%, with emergent intelligent object
+              interactions. In 12 real-world scenarios (including eight previously unseen tasks), the robot effectively
+              learns from the LTM and improves single-trial success rates from 22% to 80%, with RAG outperforming naive
+              prompting. These results highlight the effectiveness and generalizability of <span
+                class="sc">PragmaBot</span>.
             </p>
           </div>
         </div>
@@ -184,14 +297,14 @@
     </div>
   </section>
 
+  <!-- Pipeline figure -->
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- Paper video. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Approach</h2>
           <img src="./static/images/expteach-pipeline.jpg" class="interpolation-image"
-            alt="ExpTeach pipleline figure." />
+            alt="PragmaBot pipeline figure." />
           <p>
             At the start of each task, the system takes the user instruction \( \mathbf{I} \)
             and egocentric observation \( \mathbf{o}_{0} \), which the VLM summarizes into a scenario.
@@ -207,83 +320,44 @@
           </p>
         </div>
       </div>
-      <!--/ Paper video. -->
     </div>
   </section>
 
   <!-- STM and LTM Logs -->
-<!-- STM and LTM Logs -->
-<section class="section is-light">
-  <div class="container is-widescreen">
-    <h2 class="title is-3 has-text-centered mb-5">Examples</h2>
+  <section class="section is-light">
+    <div class="container is-widescreen">
+      <h2 class="title is-3 has-text-centered mb-5">Examples</h2>
 
-    <!-- STM Log -->
-    <div class="mb-6">
-      <h4 class="title is-5 has-text-centered mb-3">
-        STM Task: "Put the apple on the plate"
-      </h4>
-      <iframe src="stm.html" class="box" style="width:100%; height:600px; border:none;"></iframe>
+      <!-- STM Log -->
+      <div class="mb-6">
+        <h4 class="title is-5 has-text-centered mb-3">
+          STM Task: "Put the apple on the plate"
+        </h4>
+        <iframe src="stm.html" class="box" style="width:100%; height:600px; border:none;"></iframe>
+      </div>
+
+      <!-- LTM Log -->
+      <div>
+        <h4 class="title is-5 has-text-centered mb-3">
+          LTM Task: "Put the tennis ball on the box"
+        </h4>
+        <iframe src="ltm.html" class="box" style="width:100%; height:600px; border:none;"></iframe>
+      </div>
     </div>
+  </section>
 
-    <!-- LTM Log -->
-    <div>
-      <h4 class="title is-5 has-text-centered mb-3">
-        LTM Task: "Put the tennis ball on the box"
-      </h4>
-      <iframe src="ltm.html" class="box" style="width:100%; height:600px; border:none;"></iframe>
-    </div>
-  </div>
-</section>
-
-  <!-- <section class="section" id="BibTeX">
+  <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+      <pre><code>@article{qu2025pragmatist,
+  author    = {Qu, Kaixian and Lan, Guowei and Zurbr{\"u}gg, Ren{\'e} and Chen, Changan and Mower, Christopher E. and Bou-Ammar, Haitham and Hutter, Marco},
+  title     = {A Pragmatist Robot: Learning to Plan Tasks by Experiencing the Real World},
+  journal   = {IEEE Robotics and Automation Letters},
+  year      = {2026},
+  note      = {accepted},
 }</code></pre>
-          </div>
-    </section> -->
-
-
-  <!-- Concurrent Work. -->
-  <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an
-            idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a
-              href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a
-              href="https://video-nerf.github.io/">Video-NeRF</a>, <a
-              href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a
-              href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a
-              href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a
-              href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div> -->
-  <!--/ Concurrent Work. -->
-
-  </div>
-
+    </div>
+  </section>
 
 
   <footer class="footer">
@@ -296,7 +370,7 @@
           <i class="fab fa-github"></i>
         </a>
       </div> -->
-      <!-- <div class="columns is-centered">
+      <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
             <p>
@@ -305,10 +379,9 @@
             </p>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </footer>
-
 
 </body>
 

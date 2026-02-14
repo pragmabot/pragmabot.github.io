@@ -155,33 +155,3 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
-
-textarea {
-  width: 100%;
-  height: 400px;
-  padding: 15px;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
-  color: #333;
-  background-color: #f9f9f9;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  resize: none;
-}
-
-textarea:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
-}
-
-.module-container table tbody td.code {
-  text-align: left;
-  font-family: 'Courier New', monospace;
-  font-size: 13px;
-  white-space: pre-wrap;
-  padding: 1rem;
-  border: 1px solid #ddd;   /* Optional: border around code cells */
-  border-radius: 4px;       /* Optional: rounded corners */
-}
