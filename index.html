@@ -303,20 +303,10 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Approach</h2>
-          <img src="./static/images/pragmabot.jpg" class="interpolation-image"
+          <img src="./static/images/pragmabot.png" class="interpolation-image"
             alt="PragmaBot pipeline figure." />
           <p>
-            At the start of each task, the system takes the user instruction \( \mathbf{I} \)
-            and egocentric observation \( \mathbf{o}_{0} \), which the VLM summarizes into a scenario.
-            RAG retrieves relevant experiences from long-term memory \( \mathbf{M} \) and, together with the instruction
-            and observation,
-            feeds them into the VLM task planner \( \mathcal{T} \).
-            After execution, success is checked by the VLM. If the task is not completed,
-            the action \( \mathbf{a} \) and its feedback \( \mathbf{r} \) are accumulated into short-term memory \(
-            \mathbf{m} \) and fed back into planning.
-            Once the task is completed, the short-term memory \( \mathbf{m} \) is summarized and stored in long-term
-            memory \( \mathbf{M} \)
-            for future use.
+            At the start of each task, the system takes the user instruction and egocentric observation, which the VLM combines into a scenario (key). RAG retrieves relevant experiences from long-term memory and, together with the instruction and observation, feeds them into the VLM task planner to generate the next action. After execution, success is checked by the VLM success detector. If the task is not completed, the action and its feedback are accumulated into short-term memory and fed back into planning. Once the task is completed, the short-term memory is summarized and stored in long-term memory for future use.
           </p>
         </div>
       </div>
