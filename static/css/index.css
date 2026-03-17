@@ -2,21 +2,23 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.sc {
+  font-variant: small-caps;
+}
 
 .footer .icon-link {
-    font-size: 25px;
-    color: #000;
+  font-size: 25px;
+  color: #000;
 }
 
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .dnerf {
   font-variant: small-caps;
 }
-
 
 .teaser .hero-body {
   padding-top: 0;
@@ -27,13 +29,51 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
-
 .publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-venue {
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.publication-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+
+.publication-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .publication-banner {
-  max-height: parent;
-
+  max-height: 100%;
 }
 
 .publication-banner video {
@@ -41,75 +81,10 @@ body {
   left: auto;
   top: auto;
   transform: none;
-  object-fit: fit;
+  object-fit: contain;
 }
 
-.publication-header .hero-body {
-}
-
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-authors {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
-}
-
-.publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
-}
-
-.publication-authors {
-}
-
-.publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
-}
-
-.publication-authors a:hover {
-    text-decoration: underline;
-}
-
-.author-block {
-  display: inline-block;
-}
-
-.publication-banner img {
-}
-
-.publication-authors {
-  /*color: #4286f4;*/
-}
-
-.publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-    border-radius: 10px !important;
-}
-
-.publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.publication-body img {
-}
-
+/* ---- Carousels ---- */
 .results-carousel {
   overflow: hidden;
 }
@@ -127,7 +102,22 @@ body {
   margin: 0;
 }
 
+/* Video captions inside carousel items — fixed height for uniform cards */
+.results-carousel .item .video-caption {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  padding: 8px 12px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  line-height: 1.4;
+  height: 3.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+/* ---- Interpolation (from Nerfies template) ---- */
 .interpolation-panel {
   background: #f5f5f5;
   border-radius: 10px;
@@ -138,13 +128,6 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-video-column {
-}
-
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
-
 .interpolation-panel .slider {
   margin: 0 !important;
 }
@@ -152,6 +135,134 @@ body {
 #interpolation-image-wrapper {
   width: 100%;
 }
+
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+/* ---- Results highlight boxes ---- */
+.result-highlight-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.result-highlight-row > .column {
+  display: flex;
+}
+
+.result-highlight-box {
+  transition: transform 0.2s;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-highlight-box:hover {
+  transform: translateY(-3px);
+}
+
+.result-highlight-box .heading {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.result-highlight-box .title {
+  color: hsl(204, 86%, 40%);
+}
+
+/* ---- Comparison table ---- */
+.comparison-table {
+  font-size: 0.95rem;
+}
+
+.comparison-table .checkmark {
+  color: #23d160;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.comparison-table .xmark {
+  color: #ff3860;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.comparison-table .cmark,
+.comparison-table .dash {
+  font-size: 1.1rem;
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  line-height: 1;
+}
+
+.comparison-table .cmark {
+  color: #333;
+}
+
+.comparison-table .dash {
+  color: #ccc;
+}
+
+.comparison-table .pragmabot-row {
+  background-color: #ebffef !important;
+}
+
+.comparison-table .pragmabot-row td {
+  background-color: #ebffef !important;
+}
+
+/* ---- Ablation figures — equal height ---- */
+.ablation-figure {
+  width: 75%;
+  object-fit: contain;
+}
+
+/* ---- LTM table divider row ---- */
+.ltm-divider {
+  background-color: #f5f5f5 !important;
+  font-size: 0.9rem;
+  color: #666;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Tabs for examples section ---- */
+.tab-content {
+  display: none;
+}
+
+.tab-content.is-active {
+  display: block;
+}
+
+.example-iframe {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Code button (coming soon) styling ---- */
+/* ---- Screen-reader-only (for table captions) ---- */
+.is-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Code button (coming soon) styling ---- */
+a.is-outlined {
+  opacity: 0.7;
+}
+
+a.is-outlined:hover {
+  opacity: 1;
 }
