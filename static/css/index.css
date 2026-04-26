@@ -222,6 +222,46 @@ body {
   object-fit: contain;
 }
 
+/* ---- Interactive ablation chart grid ---- */
+.ablation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 1rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.ablation-cell {
+  position: relative;
+  /* Fixed-size container prevents the Chart.js resize loop */
+}
+
+.ablation-cell--radar {
+  height: 340px;
+}
+
+.ablation-cell--bar {
+  height: 340px;
+  display: flex;
+  align-items: center;
+}
+
+.ablation-cell canvas {
+  display: block;
+}
+
+/* Stack vertically on phones */
+@media screen and (max-width: 768px) {
+  .ablation-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .ablation-cell--radar,
+  .ablation-cell--bar {
+    height: 300px;
+  }
+}
+
 /* ---- LTM table divider row ---- */
 .ltm-divider {
   background-color: #f5f5f5 !important;

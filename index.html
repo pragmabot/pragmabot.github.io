@@ -48,6 +48,8 @@
   <script defer src="./static/js/bulma-carousel.min.js"></script>
   <script defer src="./static/js/bulma-slider.min.js"></script>
   <script defer src="./static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+  <script defer src="./static/js/rag-ablation-chart.js"></script>
 </head>
 
 <body>
@@ -475,7 +477,23 @@
       <div class="columns is-centered mt-5">
         <div class="column is-10 has-text-centered">
           <h3 class="title is-4 has-text-centered">Ablation Study of Memory Retrieval</h3>
-          <img src="./static/images/rag_ablation.png" alt="Radar charts comparing RAG retrieval strategies: RAG with gpt-4o achieves the highest first-action accuracy across tasks." class="ablation-figure" loading="lazy">
+
+          <!-- Interactive charts (2x2 grid, responsive) -->
+          <div class="ablation-grid">
+            <div class="ablation-cell ablation-cell--radar">
+              <canvas id="radar-4o"></canvas>
+            </div>
+            <div class="ablation-cell ablation-cell--bar">
+              <canvas id="bar-tokens"></canvas>
+            </div>
+            <div class="ablation-cell ablation-cell--radar">
+              <canvas id="radar-mini"></canvas>
+            </div>
+            <div class="ablation-cell ablation-cell--bar">
+              <canvas id="bar-time"></canvas>
+            </div>
+          </div>
+
           <p class="has-text-grey has-text-centered mt-3">
             RAG with <code>gpt-4o</code> achieves the highest first-action accuracy, outperforming both full LTM and
             random retrieval. <code>gpt-4o-mini</code> also benefits from relevant memories, though gains are less
