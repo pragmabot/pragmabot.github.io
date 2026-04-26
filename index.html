@@ -162,38 +162,6 @@
     </div>
   </section>
 
-  <!-- ==================== Abstract ==================== -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Large language models (LLMs) have emerged as the dominant paradigm for robotic task planning using natural
-              language instructions. However, trained on general internet data, LLMs are not inherently aligned with the
-              embodiment, skill sets, and limitations of real-world robotic systems. Inspired by the emerging paradigm
-              of verbal reinforcement learning&mdash;where LLM agents improve through self-reflection and few-shot
-              learning without parameter updates&mdash;we introduce <span class="sc">PragmaBot</span>, a framework that
-              enables robots to learn task planning through real-world experience. <span class="sc">PragmaBot</span>
-              employs a vision-language model (VLM) as the robot's &ldquo;brain&rdquo; and &ldquo;eye&rdquo;, allowing
-              it to visually evaluate action outcomes and self-reflect on failures. These reflections are stored in a
-              short-term memory (STM), enabling the robot to quickly adapt its behavior during ongoing tasks. Upon task
-              completion, the robot summarizes the lessons learned into its long-term memory (LTM). When facing new
-              tasks, it can leverage retrieval-augmented generation (RAG) to plan more grounded action sequences by
-              drawing on relevant past experiences and knowledge. Experiments on four challenging robotic tasks show that
-              STM-based self-reflection increases task success rates from 35% to 84%, with emergent intelligent object
-              interactions. In 12 real-world scenarios (including eight previously unseen tasks), the robot effectively
-              learns from the LTM and improves single-trial success rates from 22% to 80%, with RAG outperforming naive
-              prompting. These results highlight the effectiveness and generalizability of
-              <span class="sc">PragmaBot</span>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== Video Demos: STM ==================== -->
   <section class="hero is-light is-small">
     <div class="hero-body">
@@ -285,6 +253,38 @@
               <source src="./static/videos/ltm_pick_towel.mp4" type="video/mp4">
             </video>
             <p class="video-caption">Removes the orange on top before picking up the towel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Abstract ==================== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Large language models (LLMs) have emerged as the dominant paradigm for robotic task planning using natural
+              language instructions. However, trained on general internet data, LLMs are not inherently aligned with the
+              embodiment, skill sets, and limitations of real-world robotic systems. Inspired by the emerging paradigm
+              of verbal reinforcement learning&mdash;where LLM agents improve through self-reflection and few-shot
+              learning without parameter updates&mdash;we introduce <span class="sc">PragmaBot</span>, a framework that
+              enables robots to learn task planning through real-world experience. <span class="sc">PragmaBot</span>
+              employs a vision-language model (VLM) as the robot's &ldquo;brain&rdquo; and &ldquo;eye&rdquo;, allowing
+              it to visually evaluate action outcomes and self-reflect on failures. These reflections are stored in a
+              short-term memory (STM), enabling the robot to quickly adapt its behavior during ongoing tasks. Upon task
+              completion, the robot summarizes the lessons learned into its long-term memory (LTM). When facing new
+              tasks, it can leverage retrieval-augmented generation (RAG) to plan more grounded action sequences by
+              drawing on relevant past experiences and knowledge. Experiments on four challenging robotic tasks show that
+              STM-based self-reflection increases task success rates from 35% to 84%, with emergent intelligent object
+              interactions. In 12 real-world scenarios (including eight previously unseen tasks), the robot effectively
+              learns from the LTM and improves single-trial success rates from 22% to 80%, with RAG outperforming naive
+              prompting. These results highlight the effectiveness and generalizability of
+              <span class="sc">PragmaBot</span>.
+            </p>
           </div>
         </div>
       </div>
